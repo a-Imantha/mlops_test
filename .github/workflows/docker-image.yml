@@ -20,6 +20,6 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     - name: Build the Docker image PreProcess
-      run: docker build ./mlops/preprocess_data --tag iahangama/pre_processing_pipe
+      run: docker build ./mlops/preprocess --tag iahangama/pre_processing_pipe
     - name: Push the Docker Image
       run: docker push iahangama/pre_processing_pipe
